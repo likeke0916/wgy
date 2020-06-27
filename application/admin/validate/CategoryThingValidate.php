@@ -3,7 +3,7 @@
  * 报事分类验证器
  */
 
-namespace app\common\validate;
+namespace app\admin\validate;
 
 class CategoryThingValidate extends Validate
 {

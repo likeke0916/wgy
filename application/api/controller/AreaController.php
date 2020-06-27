@@ -4,24 +4,28 @@ namespace app\api\controller;
 
 use think\Request;
 use think\Db;
+use app\admin\model\AdminUser;
 
 class AreaController extends Controller
 {
 
     public function area(Request $request)
     {
-
-        switch ($request->level)
+        $level = $request['level'];
+        switch ($level)
         {
-            case 1:
-                $data = Db::name('wgy_area')->where('lever',$request->lever)->select();
+            case $level >= 3: //省市区
+                $data = Db::name('wgy_area')->where('lever',$level)->select();
                 break;
-            case 2:
+            case 4: //街道
 
                break;
             default:
+                $data = 123;
+                break;
 
         }
+        return success('成功',$data,2000);
     }
 
 }

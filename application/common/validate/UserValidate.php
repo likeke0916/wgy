@@ -8,30 +8,26 @@ namespace app\common\validate;
 class UserValidate extends Validate
 {
     protected $rule = [
-        'user_level_id|用户等级' => 'require',
-        'username|用户名'       => 'require',
-        'mobile|手机号'         => 'require',
-        'nickname|昵称'        => 'require',
-        'password|密码'        => 'require',
-        'status|是否启用'        => 'require',
+        'code' => 'require',
+        'encryptedData' => 'require',
+        'iv|代码' => 'require',
+        'phone' => 'require',
+        'verification_code' => 'require',
 
     ];
 
     protected $message = [
-        'user_level_id.require' => '用户等级不能为空',
-        'username.require'      => '用户名不能为空',
-        'mobile.require'        => '手机号不能为空',
-        'nickname.require'      => '昵称不能为空',
-        'password.require'      => '密码不能为空',
-        'status.require'        => '是否启用不能为空',
-
+        'code.require' => 'Code不能为空',
+        'encryptedData.require' => 'encryptedData不能为空',
+        'iv.require' => 'iv不能为空',
+        'phone.require' => '手机号不能为空',
+        'verification_code.require' => '验证码不能为空'
     ];
 
     protected $scene = [
-        'add'       => ['user_level_id', 'username', 'mobile', 'nickname', 'password', 'status',],
-        'edit'      => ['user_level_id', 'username', 'mobile', 'nickname', 'password', 'status',],
-        'api_login' => ['username', 'password'],
-
+//        'api_login' => ['code', 'encryptedData','iv'],
+        'api_login' => ['code'],
+        'bind_phone' => ['phone','verification_code'],
     ];
 
 

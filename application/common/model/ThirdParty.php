@@ -2,6 +2,7 @@
 namespace app\common\model;
 use app\common\model\ThirdPartyLog as TPLModel;
 use app\common\model\UserInfo as UIModel;
+use think\Db;
 /**
  * 平台端CMS数据表
  */
@@ -10,13 +11,15 @@ class ThirdParty extends Base
     // 确定链接表名
     protected $table = 'third_party';
     protected $pk = 'id';
+    protected $autoWriteTimestamp = true;
     /**
      * 添加用户信息
      */
     public function addUser($data)
     {
-        $rs = $this->save($data);
-        $this->saveLog($this->id,1);
+        //$rs = $this->allowField(true)->save($data);
+        $rs = $this::create($data);
+        $this->saveLog($rs->id,1);
         return $rs;
     }
     /**

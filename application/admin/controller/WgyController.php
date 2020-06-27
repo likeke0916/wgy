@@ -9,7 +9,7 @@ use think\Request;
 use app\common\model\Wgy;
 use app\common\model\Community;
 
-use app\common\validate\WgyValidate;
+use app\admin\validate\WgyValidate;
 
 class WgyController extends Controller
 {

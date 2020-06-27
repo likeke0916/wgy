@@ -23,7 +23,8 @@
         "lcobucci/jwt": "^3.3",
         "phpoffice/phpspreadsheet": "^1.8",
         "ext-curl": "*",
-        "ext-json": "*"
+        "ext-json": "*",
+        "firebase/php-jwt": "^5.2"
     },
     "autoload": {
         "psr-4": {
@@ -35,5 +36,11 @@
     },
     "config": {
         "preferred-install": "dist"
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
     }
 }

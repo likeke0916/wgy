@@ -1,11 +1,11 @@
 <?php
 /**
- * 社区风采验证器
+ * 社区公告验证器
  */
 
-namespace app\common\validate;
+namespace app\admin\validate;
 
-class MienValidate extends Validate
+class AfficheValidate extends Validate
 {
     protected $rule = [
         'title|标题'   => 'require',
@@ -22,6 +22,7 @@ class MienValidate extends Validate
     protected $scene = [
         'add'  => ['title', 'content',],
         'edit' => ['title', 'content',],
+
     ];
 
 

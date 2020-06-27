@@ -8,7 +8,7 @@ namespace app\admin\controller;
 use think\Request;
 use app\common\model\Affiche;
 
-use app\common\validate\AfficheValidate;
+use app\admin\validate\AfficheValidate;
 
 class AfficheController extends Controller
 {

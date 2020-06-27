@@ -8,7 +8,7 @@ namespace app\admin\controller;
 use think\Request;
 use app\common\model\CategoryThing;
 
-use app\common\validate\CategoryThingValidate;
+use app\admin\validate\CategoryThingValidate;
 
 class CategoryThingController extends Controller
 {

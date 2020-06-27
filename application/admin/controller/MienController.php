@@ -8,7 +8,7 @@ namespace app\admin\controller;
 use think\Request;
 use app\common\model\Mien;
 
-use app\common\validate\MienValidate;
+use app\admin\validate\MienValidate;
 
 class MienController extends Controller
 {

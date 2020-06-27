@@ -5,9 +5,13 @@ namespace app\api\controller;
 use app\common\model\User;
 use app\common\validate\UserValidate;
 use think\Request;
+use \Firebase\JWT\JWT;
 
 class UserController extends Controller
 {
+//    protected $authExcept = [
+//        'index'
+//    ];
 
     //列表
     public function index(User $model)

@@ -8,7 +8,7 @@ namespace app\admin\controller;
 use think\Request;
 use app\common\model\Community;
 
-use app\common\validate\CommunityValidate;
+use app\admin\validate\CommunityValidate;
 
 class CommunityController extends Controller
 {

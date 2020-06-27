@@ -23,10 +23,10 @@ Route::group('api', function () {
     Route::get('index','api/Index/index');
 
     //自带示例，上线务必删除
-//    Route::resource('user','api/User') ->only(['index','save', 'read', 'update','delete']);
+    Route::resource('user','api/User') ->only(['index','save', 'read', 'update','delete']);
     Route::any('user/login','api/UserInfo/login');
-    Route::post('user/verificationCode','api/UserInfo/verificationCode');
-    Route::post('user/bindPhone','api/User1/bindPhone');
+    Route::post('verificationCode','api/UserInfo/verificationCode');
+    Route::post('bindPhone','api/UserInfo/bindPhone');
 
     //公告列表
     Route::get('notice','api/Notice/index');

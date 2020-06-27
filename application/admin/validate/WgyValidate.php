@@ -3,7 +3,7 @@
  * 网格员管理验证器
  */
 
-namespace app\common\validate;
+namespace app\admin\validate;
 
 class WgyValidate extends Validate
 {

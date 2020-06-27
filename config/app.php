@@ -139,7 +139,7 @@ return [
     // 错误显示信息,非调试模式有效
     'error_message'          => '页面错误！请稍后再试～',
     // 显示错误信息
-    'show_error_msg'         => false,
+    'show_error_msg'         => true,
     // 异常处理handle类 留空使用 \think\exception\Handle
     'exception_handle'       => '\\app\\common\\exception\\Http',
     //程序加密密码,默认为`Taoqi,I love you.`的md5
@@ -159,8 +159,10 @@ return [
     //token前缀
     'token_prefix'           => 'zuoyouweilai',
     'user_token_exp' => 86400,
-    'xcx_user_appid'                  => 'wx62ac8bb775bfb246',
+    //'xcx_user_appid'                  => 'wx62ac8bb775bfb246',
+    'xcx_user_appid'                  => 'wx50de46f880221a0b',
     // 小程序端微信 secret 秘钥
-    'xcx_user_secret'                 => '31e8596a52a986d38ef418a8f44567bb',
+    //'xcx_user_secret'                 => '31e8596a52a986d38ef418a8f44567bb',
+    'xcx_user_secret'                 => '16f208e5ab32612d8a640e421400eb71',
 
 ];
