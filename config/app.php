@@ -159,10 +159,10 @@ return [
     //token前缀
     'token_prefix'           => 'zuoyouweilai',
     'user_token_exp' => 86400,
-    //'xcx_user_appid'                  => 'wx62ac8bb775bfb246',
-    'xcx_user_appid'                  => 'wx50de46f880221a0b',
+    'xcx_user_appid'                  => 'wx62ac8bb775bfb246',
+//    'xcx_user_appid'                  => 'wx50de46f880221a0b',
     // 小程序端微信 secret 秘钥
-    //'xcx_user_secret'                 => '31e8596a52a986d38ef418a8f44567bb',
-    'xcx_user_secret'                 => '16f208e5ab32612d8a640e421400eb71',
+    'xcx_user_secret'                 => '31e8596a52a986d38ef418a8f44567bb',
+//    'xcx_user_secret'                 => '16f208e5ab32612d8a640e421400eb71',
 
 ];
