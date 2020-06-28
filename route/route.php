@@ -33,6 +33,8 @@ Route::group('api', function () {
 
     //地区
     Route::get('area','api/Area/area');
+    Route::post('area', 'api/Area/saveCommunity');
+
     //miss路由
     Route::miss(function (){
         return json([

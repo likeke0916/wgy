@@ -3,6 +3,7 @@
 namespace app\api\controller;
 
 use app\common\model\Community;
+use app\common\model\UserInfo;
 use app\common\validate\AreaValidate;
 use think\Request;
 use think\Db;
@@ -15,7 +16,7 @@ class AreaController extends Controller
     {
        $param = $request->param();
         //数据验证
-        $validate_result = $validate->scene('api_login')->check($param);
+        $validate_result = $validate->scene('api_area')->check($param);
         if (!$validate_result) {
             return error($validate->getError(),'',3001);
         }
@@ -45,6 +46,25 @@ class AreaController extends Controller
 
         }
         return success('成功',$data,2000);
+    }
+
+
+    public function saveCommunity(Request $request , AreaValidate $validate)
+    {
+        $param = $request->param();
+        //数据验证
+        $validate_result = $validate->scene('save_area')->check($param);
+        if (!$validate_result) {
+            return error($validate->getError(),'',3001);
+        }
+        if (! $community = Community::get($param['community_id'])){
+            return error('数据不存在','',2002);
+        }
+        $user = UserInfo::get($this->uid);
+        $user->admiin_user_id = $community['admin_user_id'];
+        $user->community_id = $param['community_id'];
+        $user->save();
+        return success('成功','',2000);
     }
 
 
